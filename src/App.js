@@ -1,9 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import routes from "navigation/routes"
+import { DataProvider } from "contextAPI/DataContext"
+import { initialState } from "contextAPI/reducers"
+import appReducers from "contextAPI/appReducers"
 
 function App() {
   return (
-    
+    <DataProvider reducer={appReducers} initialState={initialState}>
       <BrowserRouter>
         <Routes>
           {routes.map((route, index) => (
@@ -15,6 +18,7 @@ function App() {
           ))}
         </Routes>
       </BrowserRouter>
+    </DataProvider>
   )
 }
 
