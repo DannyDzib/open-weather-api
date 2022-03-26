@@ -3,6 +3,7 @@ import routes from "navigation/routes"
 
 function App() {
   return (
+    
       <BrowserRouter>
         <Routes>
           {routes.map((route, index) => (
