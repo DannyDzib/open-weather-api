@@ -1,1 +1,3 @@
-export const GET_CLIMATES = "[HOME] CLIMATE"
+export const HOME_LOADING = "[HOME] LOADING"
+export const GET_HOME_CITIES = "[HOME] GET_CITIES"
+export const GET_HOME_CLIMATES = "[HOME] GET_CLIMATES"

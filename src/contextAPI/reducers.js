@@ -1,18 +1,16 @@
 const initialState = {
-    homme:null
-  }
-  
- const combineReducers = (reducers) => {  
-    return (state = {}, action) => {
-      const newState = {};
-      for (let key in reducers) {
-        newState[key] = reducers[key](state[key],   
-          );
+  home: {},
+}
+
+const combineReducers = (reducers) => {
+  return (state, action) => {
+    return Object.keys(reducers).reduce((acc, prop) => {
+      return {
+        ...acc,
+        ...reducers[prop]({ [prop]: acc[prop] }, action),
       }
-      return newState;
-    }
+    }, state)
   }
-  
+}
 
 export { initialState, combineReducers }
-
