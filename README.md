@@ -1,6 +1,11 @@
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Antes de Instalar las dependencias crea un archivo en la carpeta raiz con nombre .env.local y agregar
+    
+    REACT_APP_OPEN_WEATHERMAP_API_URL = https://api.openweathermap.org/data/2.5/onecall
+    REACT_APP_OPEN_WEATHERMAP_API_KEY = a5a47c18197737e8eeca634cd6acb581
+    REACT_APP_CITIES_API_URL = https://search.reservamos.mx/api/v2/places
 
 ## Available Scripts
 
@@ -10,13 +15,4 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 
