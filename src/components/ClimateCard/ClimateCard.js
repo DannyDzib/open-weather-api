@@ -7,12 +7,13 @@ import LightModeIcon from "@mui/icons-material/LightMode"
 import ModeNightIcon from "@mui/icons-material/ModeNight"
 
 const ClimateCard = (props) => {
-  const { data: { temp }, index} = props
+  const { data, index, humidityMax } = props
+  const { temp } = data
   const date = new Date().setDate(new Date().getDate() + index)
   return (
     <Card variant="outlined" sx={sx.root}>
       <CardContent sx={sx.cardContent}>
-        <Typography color="text.secondary" sx={sx.nameDay} >
+        <Typography color="text.secondary" sx={sx.nameDay}>
           {`${index === 0 ? "Hoy" : ""} ${formDateNameDay(date)}`}
         </Typography>
         <Typography variant="body1" color="text.secondary">
@@ -26,6 +27,11 @@ const ClimateCard = (props) => {
           {`Noche ${kelvinTocelcius(temp.night)}°C`}
           <ModeNightIcon color="primary" />
         </Typography>
+        {index === humidityMax && (
+          <Typography mb={1.5} color="text.secondary">
+            {`humedad ${data.humidity}`}
+          </Typography>
+        )}
 
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography color="text.secondary">
